@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = ({ label, ...rest }) => {
   return (
-    <div className="mb-4">
+    <div>
       <p className="text-base mb-2">{label}</p>
       <input
         placeholder="Form Input"
