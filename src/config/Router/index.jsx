@@ -1,14 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home, Login, Register } from "../../pages";
+import { Login, MainApp, Register, NotFound } from "../../pages";
 
 const Router = () => {
   return (
     <>
       <Routes>
-        <Route index element={<Home />}></Route>
+        <Route path="/*" element={<MainApp />}></Route>
+        {/* <Route path="/main/*" element={<MainApp />}></Route> Kalau ada 2 yang nested */}
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
   );
