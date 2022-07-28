@@ -8,7 +8,7 @@ const Register = () => {
       <div className="flex-1">
         <img
           src={RegisterBg}
-          alt="image-register"
+          alt="bg-image"
           className="w-full h-full object-cover"
         />
       </div>

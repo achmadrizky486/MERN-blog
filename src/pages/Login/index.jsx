@@ -8,7 +8,7 @@ const Login = () => {
       <div className="flex-1">
         <img
           src={LoginBg}
-          alt="image-register"
+          alt="bg-image"
           className="w-full h-full object-cover"
         />
       </div>

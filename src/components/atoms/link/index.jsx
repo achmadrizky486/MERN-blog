@@ -4,7 +4,7 @@ const Link = ({ title, onClick }) => {
   return (
     <>
       <p
-        className="text-base text-center text-[#ababab] underline"
+        className="text-base text-center text-[#ababab] underline cursor-pointer"
         onClick={onClick}
       >
         {title}
