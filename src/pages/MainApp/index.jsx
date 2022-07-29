@@ -13,7 +13,7 @@ const MainApp = () => {
         <div>
           <Header />
         </div>
-        <div className="flex-1 justify-between px-10">
+        <div className="flex-1 max-w-[1280px] m-auto w-full">
           <Routes>
             <Route index element={<Home />}></Route>
             <Route path="create-blog" element={<CreateBlog />}></Route>

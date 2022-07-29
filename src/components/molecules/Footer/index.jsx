@@ -25,7 +25,7 @@ const Icon = ({ img }) => {
 const Footer = () => {
   return (
     <>
-      <div className="bg-blue-400 items-center justify-between py-3 px-10 flex">
+      <div className="bg-blue-400 items-center justify-between py-3 px-10 flex mt-5">
         <div>
           <img src={Logo} alt="" className="bg-white rounded-lg mx-1" />
         </div>
