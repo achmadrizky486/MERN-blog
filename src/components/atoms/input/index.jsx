@@ -6,7 +6,7 @@ const Input = ({ label, ...rest }) => {
       <p className="text-base mb-2">{label}</p>
       <input
         placeholder="Form Input"
-        className="border border-gray-500 p-3 rounded-lg outline-none w-full box-border"
+        className="border border-gray-500 p-3 rounded-lg outline-none w-full box-border h-10"
         {...rest}
       />
     </div>
