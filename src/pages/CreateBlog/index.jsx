@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Input, TextArea, Upload } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const CreateBlog = () => {
+  const history = useNavigate();
   return (
     <div>
       <div>
@@ -10,8 +12,13 @@ const CreateBlog = () => {
       <Input label={"Post Title"} placeholder="Title" />
       <Upload />
       <TextArea />
-      <div className="mt-4 w-[200px] ml-auto">
-        <Button title={"Save"} />
+      <div className="flex">
+        <div className="mt-4 w-[200px] mr-auto">
+          <Button title={"Kembali"} onClick={() => history("/")} />
+        </div>
+        <div className="mt-4 w-[200px] ml-auto">
+          <Button title={"Save"} />
+        </div>
       </div>
     </div>
   );

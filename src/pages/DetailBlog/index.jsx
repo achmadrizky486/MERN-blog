@@ -1,7 +1,10 @@
 import React from "react";
 import { RegisterBg } from "../../assets";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../components";
 
 const DetailBlog = () => {
+  const history = useNavigate();
   return (
     <div>
       <img
@@ -17,6 +20,9 @@ const DetailBlog = () => {
         earum eos eligendi nihil mollitia, officia architecto aut consequatur
         odio, beatae corrupti.
       </p>
+      <div className="mt-4 w-[200px] mr-auto">
+        <Button title={"Kembali"} onClick={() => history("/")} />
+      </div>
     </div>
   );
 };

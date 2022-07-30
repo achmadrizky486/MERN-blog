@@ -1,12 +1,14 @@
 import React from "react";
 import { BlogItem } from "../../components";
 import { Button, Gap } from "../../components/atoms";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const history = useNavigate();
   return (
     <div className="mt-8">
       <div className="w-48 ml-auto mr-0 mb-8">
-        <Button title={"Create Post"} />
+        <Button title={"Create Post"} onClick={() => history("/create-blog")} />
       </div>
       <div className="grid grid-cols-2 w-full gap-10">
         <BlogItem />

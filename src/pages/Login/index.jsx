@@ -1,8 +1,10 @@
 import React from "react";
 import { LoginBg } from "../../assets";
 import { Button, Gap, Input, Link } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const history = useNavigate();
   return (
     <div className="flex h-screen">
       <div className="flex-1">
@@ -18,9 +20,11 @@ const Login = () => {
         <Gap height={18} />
         <Input label="Password" placeholder="Password" type="password" />
         <Gap height={20} />
-        <Button title="Login" />
+        <Button title="Login" onClick={() => history("/")} />
         <Gap height={100} />
-        <Link title="Daftar" />
+        <div className="text-center text-[#ababab]">
+          <Link title="Daftar" onClick={() => history("/register")} />
+        </div>
       </div>
     </div>
   );

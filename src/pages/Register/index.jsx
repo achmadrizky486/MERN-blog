@@ -1,8 +1,10 @@
 import React from "react";
 import { RegisterBg } from "../../assets";
 import { Button, Gap, Input, Link } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const history = useNavigate();
   return (
     <div className="flex h-screen">
       <div className="flex-1">
@@ -22,7 +24,9 @@ const Register = () => {
         <Gap height={20} />
         <Button title="Register" />
         <Gap height={100} />
-        <Link title="Kembali ke Login" />
+        <div className="text-center text-[#ababab]">
+          <Link title="Kembali ke Login" onClick={() => history("/login")} />
+        </div>
       </div>
     </div>
   );
