@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     Axios.get("http://localhost:4000/v1/blog/posts")
       .then((result) => {
-        console.log("result = ", result);
+        console.log("result = ", result.data);
       })
       .catch((err) => {
         console.log("error = ", err);
