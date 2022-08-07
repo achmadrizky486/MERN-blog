@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BlogItem } from "../../components";
 import { Button, Gap } from "../../components/atoms";
 import { useNavigate } from "react-router-dom";
+import Axios from "axios";
 
 const Home = () => {
+  useEffect(() => {
+    Axios.get("http://localhost:4000/v1/blog/posts")
+      .then((result) => {
+        console.log("result = ", result);
+      })
+      .catch((err) => {
+        console.log("error = ", err);
+      });
+  }, []);
+
   const history = useNavigate();
   return (
     <div className="mt-8">
