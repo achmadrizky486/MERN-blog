@@ -2,17 +2,21 @@ import React, { useEffect, useState } from "react";
 import { BlogItem } from "../../components";
 import { Button, Gap } from "../../components/atoms";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 
 const Home = () => {
   const [dataBlog, setDataBlog] = useState([]);
-
   const stateGlobal = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   console.log("state Global = ", stateGlobal);
-
   useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "UPDATE_NAME" });
+      dispatch({ type: "UPDATE_UMUR" });
+    }, 3000);
+
     Axios.get("http://localhost:4000/v1/blog/posts")
       .then((result) => {
         console.log("result = ", result.data);
@@ -30,6 +34,8 @@ const Home = () => {
       <div className="w-48 ml-auto mr-0 mb-8">
         <Button title={"Create Post"} onClick={() => history("/create-blog")} />
       </div>
+      <p>{stateGlobal.name}</p>
+      <p>{stateGlobal.umur}</p>
       <div className="grid grid-cols-2 w-full gap-10">
         {dataBlog.map((blog) => {
           return (
