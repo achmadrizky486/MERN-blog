@@ -3,7 +3,7 @@ import { BlogItem } from "../../components";
 import { Button, Gap } from "../../components/atoms";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import Axios from "axios";
+import { setDataBlog } from "../../config/redux/action";
 
 const Home = () => {
   // const stateGlobal = useSelector((state) => state.HomeReducer);
@@ -11,16 +11,8 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    Axios.get("http://localhost:4000/v1/blog/posts")
-      .then((result) => {
-        console.log(dataBlog);
-        const response = result.data;
-        dispatch({ type: "UPDATE_DATA_BLOG", payload: response.data });
-      })
-      .catch((err) => {
-        console.log("error = ", err);
-      });
-  }, []);
+    dispatch(setDataBlog());
+  }, [dispatch]);
 
   const history = useNavigate();
   return (

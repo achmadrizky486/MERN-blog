@@ -12,7 +12,7 @@ const Header = () => {
         MERN Blog
       </p>
       <div
-        className="cursor-pointer px-2 rounded-md bg-white hover:bg-blue-400 hover:text-white text-blue-400 font-normal"
+        className="cursor-pointer px-2 rounded-md bg-blue-400 hover:bg-white hover:text-blue-400 text-white font-normal"
         onClick={() => history("/login")}
       >
         <p>Logout</p>
