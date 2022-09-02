@@ -8,7 +8,7 @@ const BlogItem = (props) => {
   const history = useNavigate();
   return (
     <div>
-      <div className="w-full rounded-lg overflow-hidden shadow-lg shadow-black/40 hover:scale-105">
+      <div className="w-full rounded-lg overflow-hidden shadow-lg shadow-black/40 hover:cursor-pointer">
         <img src={image} alt="" className="w-full h-48 object-cover" />
         <div className="p-4">
           <p className="text-xl font-bold text-[#313131] h-[50px]">{title}</p>
